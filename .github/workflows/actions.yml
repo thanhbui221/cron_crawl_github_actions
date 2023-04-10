@@ -1,8 +1,8 @@
-name: run main.py
+name: run run.sh
 
 on:
   schedule:
-    - cron: '0 5 * * 2' # At 00:00 on Monday
+    - cron: '0 0 * * 2' # At 00:00(UTC) or 07:00(GMT+7) on Tuesday
 
 jobs:
   build:
