@@ -22,10 +22,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute bash script # run run.sh
+      - name: execute python script # run run.sh
         env:
           SERVICE_ACC: ${{ secrets.SERVICE_ACC }}
-        run: /bin/bash run.sh
+        run: python main.py 1 9
           
       - name: commit files
         run: |
