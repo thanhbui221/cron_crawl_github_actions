@@ -1,9 +1,7 @@
-name: run run.sh
+name: manually run run.sh
 
 on:
-  schedule:
-    - cron: '0 0 * * 2' # At 00:00(UTC) or 07:00(GMT+7) on Tuesday
-
+  [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,7 +23,7 @@ jobs:
       - name: execute python script # run run.sh
         env:
           SERVICE_ACC: ${{ secrets.SERVICE_ACC }}
-        run: /bin/bash run.sh
+        run: /bin/bash run.sh 
           
       - name: commit files
         run: |

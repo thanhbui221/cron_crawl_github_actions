@@ -25,7 +25,7 @@ jobs:
       - name: execute python script # run run.sh
         env:
           SERVICE_ACC: ${{ secrets.SERVICE_ACC }}
-        run: python main.py 1 9
+        run: /bin/bash run.sh 
           
       - name: commit files
         run: |
